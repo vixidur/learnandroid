@@ -1,15 +1,19 @@
 package com.example.fourproject;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -31,7 +35,7 @@ import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
     TextView jsonDemo;
-    Button btnShow, btnCheck, btnPlayAudio, btnStop, btnNext;
+    Button btnShow, btnCheck, btnPlayAudio, btnStop, btnNext, btnBack;
     CheckBox checkTVC;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -73,13 +77,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnNext = findViewById(R.id.btnNext);
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setContentView(R.layout.activity_main2);
-            }
-        });
         Toolbar toolbar = findViewById(R.id.toolbar_menu);
         setSupportActionBar(toolbar);
     }
@@ -96,7 +93,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.item1) {
-            showAlert("Day la Music Player");
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            startActivity(intent);
+        }
+        if(id == R.id.item3) {
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

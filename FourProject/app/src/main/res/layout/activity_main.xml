@@ -46,9 +46,6 @@
             <TableRow android:gravity="center">
                 <Button android:id="@+id/btnStop" android:text="Stop"/>
             </TableRow>
-            <TableRow android:gravity="center">
-                <Button android:id="@+id/btnNext" android:text="Next"/>
-            </TableRow>
         </TableLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

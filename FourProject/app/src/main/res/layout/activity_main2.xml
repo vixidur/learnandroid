@@ -3,25 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         tools:ignore="MissingConstraints">
+        <TableRow>
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar_menu"
+                android:background="#d64455"
+                tools:ignore="MissingConstraints"
+                app:title="DANH SACH SINH VIEN"
+                app:titleTextColor="@color/white"
+                />
+        </TableRow>
+        <TableRow>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TableRow android:gravity="center">
-                <Button android:id="@+id/btnPlay" android:text="Play Audio"/>
-            </TableRow>
-            <TableRow android:gravity="center">
-                <Button android:id="@+id/btnStop" android:text="Stop"/>
-            </TableRow>
-        </TableLayout>
-    </LinearLayout>
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </TableRow>
+        <TableRow/>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
