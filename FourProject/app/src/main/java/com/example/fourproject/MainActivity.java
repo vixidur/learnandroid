@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -11,8 +13,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -27,7 +31,7 @@ import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
     TextView jsonDemo;
-    Button btnShow, btnCheck, btnPlayAudio, btnStop;
+    Button btnShow, btnCheck, btnPlayAudio, btnStop, btnNext;
     CheckBox checkTVC;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -69,6 +73,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnNext = findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_main2);
+            }
+        });
+        Toolbar toolbar = findViewById(R.id.toolbar_menu);
+        setSupportActionBar(toolbar);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.item1) {
+            showAlert("Day la Music Player");
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void loadJSON(){
