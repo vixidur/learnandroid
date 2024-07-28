@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow android:gravity="center" android:layout_marginTop="100dp">
+                <Button android:id="@+id/btnShow" android:text="HIEN THI FILE JSON"/>
+            </TableRow>
+            <TableRow android:gravity="center">
+                <TextView android:textSize="20dp" android:id="@+id/jsonDemo" android:textAlignment="center" />
+            </TableRow>
+            <TableRow android:gravity="center">
+                <CheckBox android:text="Tran Van Chien" android:id="@+id/tvc"/>
+            </TableRow>
+            <TableRow android:gravity="center">
+                <Button android:text="Xac nhan" android:id="@+id/btnCheck"/>
+            </TableRow>
+            <TableRow android:gravity="center">
+                <Button android:id="@+id/btnPlay" android:text="Play Audio"/>
+            </TableRow>
+            <TableRow android:gravity="center">
+                <Button android:id="@+id/btnStop" android:text="Stop"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

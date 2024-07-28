@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Chien",
+    "country": "VN",
+    "age": 18,
+    "xe": ["Mercedes", "BWM", "Toyota"]
+  },
+  {
+    "name": "Nam",
+    "country": "Phap",
+    "age": 28,
+    "xe": ["Chrosles", "Audi", "Wave"]
+  },
+  {
+    "name": "Viet",
+    "country": "USA",
+    "age": 38,
+    "xe": ["Mazda", "Lamborghini", "Ferrari"]
+  }
+]
