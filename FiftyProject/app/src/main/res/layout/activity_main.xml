@@ -19,7 +19,15 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <TableRow>
 
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_menu"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    app:title="DANH SACH CONG DAN"
+                    app:titleTextColor="@color/white" />
+            </TableRow>
             <TableRow>
 
                 <EditText
@@ -45,7 +53,10 @@
                 </TableLayout>
             </TableRow>
             <TableRow>
-                <ListView android:id="@+id/lv"/>
+
+                <ListView
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent" />
             </TableRow>
         </TableLayout>
     </LinearLayout>

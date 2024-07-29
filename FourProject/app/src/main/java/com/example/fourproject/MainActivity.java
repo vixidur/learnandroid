@@ -110,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
             byte[] buffer = new byte[size];
             inputStream.read(buffer);
             inputStream.close();
-
-
             String json = new String(buffer, StandardCharsets.UTF_8);
             JSONArray jsA = new JSONArray(json);
             JSONArray xe;
