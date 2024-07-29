@@ -15,7 +15,6 @@
         tools:ignore="MissingConstraints"
         app:title=" "
         />
-
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"

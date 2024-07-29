@@ -20,6 +20,21 @@
                 app:titleTextColor="@color/white"
                 />
         </TableRow>
+        <TableRow >
+            <EditText android:id="@+id/etAddNewName" android:hint="Nhap ten can them"/>
+        </TableRow>
+        <TableRow >
+            <EditText android:id="@+id/etNewPhone" android:hint="Nhap sdt can them"/>
+        </TableRow>
+        <TableRow>
+            <TableLayout>
+                <TableRow android:gravity="center">
+                    <Button android:id="@+id/btnAddNewName" android:text="Them Sinh Vien"/>
+                    <Button android:id="@+id/btnEdit" android:text="Sua thong tin"/>
+                    <Button android:id="@+id/btnRemove" android:text="Xoa"/>
+                </TableRow>
+            </TableLayout>
+        </TableRow>
         <TableRow>
 
             <ListView

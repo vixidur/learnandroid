@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.noinaycoanh);
         btnPlayAudio = findViewById(R.id.btnPlay);
         btnPlayAudio.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.item3) {
             finish();
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     private void loadJSON(){
@@ -109,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
             byte[] buffer = new byte[size];
             inputStream.read(buffer);
             inputStream.close();
+
+
             String json = new String(buffer, StandardCharsets.UTF_8);
             JSONArray jsA = new JSONArray(json);
             JSONArray xe;
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 country = jsO.getString("country");
                 age = jsO.getInt("age");
                 xe = jsO.getJSONArray("xe");
-                sb.append(String.format("Name: %s \nCountry: %s \nAge: %s\nXe: %s\n", name, country, age, xe));
+                sb.append(String.format("Name: %s \nCountry: %s \nAge: %s \nXe: ",name,country,age,xe));
                 jsonDemo = findViewById(R.id.jsonDemo);
                 jsonDemo.setText(sb);
             }
