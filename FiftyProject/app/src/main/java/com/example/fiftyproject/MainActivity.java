@@ -57,18 +57,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        //sua sinh vien
         btnEdit = findViewById(R.id.btnEdit);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 cd = arrList.get(i);
                 String[] parts = cd.toString().split(" - ");
-                if (parts.length == 2) {
+                if(parts.length == 2){
                     etHoten.setText(parts[0]);
                     etCCCD.setText(parts[1]);
-                } else {
+                }else{
                     etHoten.setText("");
                     etCCCD.setText("");
                 }
@@ -76,17 +74,16 @@ public class MainActivity extends AppCompatActivity {
                 btnEdit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String newHoTen = etHoten.getText().toString();
-                        String newCccd = etCCCD.getText().toString();
-                        cd.setHoten(newHoTen);
-                        cd.setCccd(newCccd);
+                        String updateHoten = etHoten.getText().toString();
+                        String updateCCCD = etCCCD.getText().toString();
+                        cd.setHoten(updateHoten);
+                        cd.setCccd(updateCCCD);
                         adapter.notifyDataSetChanged();
                         etHoten.setText("");
                         etCCCD.setText("");
                     }
                 });
 
-                // xoa
                 btnRemove = findViewById(R.id.btnRemove);
                 btnRemove.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -99,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
 
         Toolbar toolbar = findViewById(R.id.toolbar_menu);
         setSupportActionBar(toolbar);

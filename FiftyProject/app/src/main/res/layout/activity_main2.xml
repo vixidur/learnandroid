@@ -7,4 +7,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnShowJSON"
+                    android:text="HIEN THI FILE JSON" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvJSON"
+                    android:text=""
+                    android:textSize="25dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/nameSong"
+                    android:hint="Nhap ten bai hai" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/nameSinger"
+                    android:hint="Nhap tac gia" />
+            </TableRow>
+
+            <TableRow>
+
+                <TableLayout>
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnThem"
+                            android:text="Them" />
+
+                        <Button
+                            android:id="@+id/btnSua"
+                            android:text="Sua" />
+
+                        <Button
+                            android:id="@+id/btnXoa"
+                            android:text="Xoa" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <ListView
+                    android:id="@+id/lv"
+                    android:layout_width="398dp"
+                    android:layout_height="254dp" />
+            </TableRow>
+            <TableRow>
+                <Button android:id="@+id/btnPlay" android:text="Play Audio"/>
+            </TableRow>
+            <TableRow>
+                <Button android:id="@+id/btnStop" android:text="Stop"/>
+            </TableRow>
+            <TableRow>
+                <Button android:id="@+id/saveButton" android:text="Save"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
